@@ -34,3 +34,29 @@ int main(){
             break;
         }
     }
+    if (move==1){
+        printf("Sequence of request access: \n");
+        for(i=index;i<n;i++){
+            printf("%d",RQ[i]);
+            TotalHeadMoment=TotalHeadMoment+abs(RQ[i]-initial);
+            initial=RQ[i];
+        }
+        TotalHeadMoment=TotalHeadMoment+abs(size-RQ[i-1]-1);
+        TotalHeadMoment=TotalHeadMoment+abs(size-1-0);
+        initial=0;
+        for(i=0;i<index;i++){
+            printf("%d",RQ[i]);
+            TotalHeadMoment=TotalHeadMoment+abs(RQ[i]-initial);
+            initial=RQ[i];
+        }
+    }
+    else{
+        printf("Sequence of request access: \n");
+        for(i=index-1;i>=0;i--)
+        {
+            printf("%d",RQ[i]);
+            TotalHeadMoment=TotalHeadMoment+abs(RQ[i]-initial);
+            initial=RQ[i];
+        }
+    }
+    

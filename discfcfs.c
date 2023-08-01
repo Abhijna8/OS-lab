@@ -25,3 +25,13 @@ int main()
 
 }
 
+/*OUTPUT
+Enter thr number of requests5
+enter the request order:30
+66
+24
+75
+50
+45->30-->66-->24-->75-->50
+total head movement=169
+[1] + Done  */   
