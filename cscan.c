@@ -58,5 +58,57 @@ int main(){
             TotalHeadMoment=TotalHeadMoment+abs(RQ[i]-initial);
             initial=RQ[i];
         }
+        TotalHeadMoment=TotalHeadMoment+abs(RQ[i+1]-0);
+        TotalHeadMoment=TotalHeadMoment+abs(size-1-0);
+        initial=size-1;
+        for(i=n-1;i>=index;i--){
+            printf("%d",RQ[i]);
+            TotalHeadMoment=TotalHeadMoment+abs(RQ[i]-initial);
+            initial=RQ[i];
+        }
     }
-    
+  printf("\nTotal head movement is %d",TotalHeadMoment);
+  return 0;
+}
+
+/*Output:
+Enter the number of requestes: 
+7
+Enter request Sequence
+82
+170
+43
+140
+24
+16
+190
+Enter intial head position
+50
+Enter total disk size
+7
+Enter the head movement direction for high 1 and low 0
+1
+Sequence of request access: 
+82140170190162443
+Total head movement is 373@Abhijna8 ➜ /workspaces/OS-lab (main) $ gcc cscan.c
+@Abhijna8 ➜ /workspaces/OS-lab (main) $ ./a.out
+Enter the number of requestes: 
+7
+Enter request Sequence
+82
+170
+43
+140
+24
+16
+190
+Enter intial head position
+50
+Enter total disk size
+200
+Enter the head movement direction for high 1 and low 0
+1
+Sequence of request access: 
+82140170190162443
+Total head movement is 391
+*/
